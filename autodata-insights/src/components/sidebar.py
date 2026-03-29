@@ -20,6 +20,6 @@ def render_sidebar():
             st.success("File uploaded successfully! 🎉")
 
         st.markdown("---")
-        st.caption("AutoData Insights UI v0.1")
+        st.caption("AutoData Insights UI v1.02 by Lorenzo Martelli")
 
         return uploaded_file
