@@ -3,22 +3,21 @@ import streamlit as st
 
 def render_sidebar():
     """
-    Renderizza la barra laterale e gestisce l'upload del file CSV.
-    Ritorna il file caricato (o None se non c'è).
+    Renders the sidebar and handles CSV file upload.
+    Returns the uploaded file (or None if empty).
     """
     with st.sidebar:
-        st.title("⚙️ Configurazione")
-        st.markdown("Carica il tuo dataset per iniziare l'esplorazione automatica.")
+        st.title("⚙️ Configuration")
+        st.markdown("Upload your dataset to start the automated exploration.")
 
-        # Il widget magico di Streamlit per l'upload
         uploaded_file = st.file_uploader(
-            "Trascina qui il tuo CSV",
+            "Drag and drop your CSV here",
             type=["csv"],
-            help="Sono supportati solo file in formato .csv"
+            help="Only .csv files are supported"
         )
 
         if uploaded_file is not None:
-            st.success("File caricato con successo! 🎉")
+            st.success("File uploaded successfully! 🎉")
 
         st.markdown("---")
         st.caption("AutoData Insights UI v0.1")
